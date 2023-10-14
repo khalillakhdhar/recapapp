@@ -2,6 +2,7 @@ package com.relations.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 
@@ -18,6 +19,7 @@ private String nom,prenom,adresse,tel;
 @Column(columnDefinition = "integer default 20")
 private int age;
 @ManyToMany(mappedBy = "users")
+
 private List<Message> messages=new ArrayList<Message>();
 
 }
